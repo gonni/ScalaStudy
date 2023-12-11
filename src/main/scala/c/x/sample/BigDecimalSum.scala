@@ -31,15 +31,6 @@ object BigDecimalSum extends App {
           higherNum = 0
           ret
       }
-
-//      if(v > 9) {
-//        higherNum = 1
-//        v - 10
-//      } else {
-//        val ret = v + higherNum
-//        higherNum = 0
-//        ret
-//      }
     }).reverse.mkString
   }
 

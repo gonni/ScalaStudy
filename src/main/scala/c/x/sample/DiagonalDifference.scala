@@ -32,10 +32,6 @@ object DiagonalDifference {
 
     Math.abs(getSum(arr) - getSum(arr.reverse))
   }
-//
-//  def main(args: Array[String]): Unit = {
-//
-//  }
 
   def main(args: Array[String]) {
     val printWriter = new PrintWriter(System.out)
