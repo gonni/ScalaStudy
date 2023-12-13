@@ -6,3 +6,5 @@ lazy val root = (project in file("."))
   .settings(
     name := "CodingTestScala"
   )
+
+libraryDependencies += "org.typelevel" %% "cats-effect" % "3.5.2"
