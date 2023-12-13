@@ -1,4 +1,4 @@
-package c.x.sample
+package c.x.codingtest
 
 import java.io._
 import java.math._

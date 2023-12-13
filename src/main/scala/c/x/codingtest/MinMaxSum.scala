@@ -1,4 +1,4 @@
-package c.x.sample
+package c.x.codingtest
 
 object MinMaxSum extends App {
   def miniMaxSum(arr: Array[Int]) = {

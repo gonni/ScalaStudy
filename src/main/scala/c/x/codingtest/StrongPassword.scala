@@ -1,4 +1,4 @@
-package c.x.sample
+package c.x.codingtest
 
 import scala.annotation.tailrec
 import scala.collection.immutable

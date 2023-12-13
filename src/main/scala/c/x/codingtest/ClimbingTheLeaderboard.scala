@@ -1,4 +1,4 @@
-package c.x.sample
+package c.x.codingtest
 import scala.collection.Searching.{Found, InsertionPoint}
 import scala.collection.mutable._
 

@@ -1,4 +1,4 @@
-package c.x.sample
+package c.x.codingtest
 
 object StarTower extends App {
   def staircase(n: Int) = {

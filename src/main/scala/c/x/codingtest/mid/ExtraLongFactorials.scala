@@ -1,4 +1,4 @@
-package c.x.sample.mid
+package c.x.codingtest.mid
 
 import scala.annotation.tailrec
 
