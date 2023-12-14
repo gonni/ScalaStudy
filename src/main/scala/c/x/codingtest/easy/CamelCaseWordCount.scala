@@ -1,4 +1,4 @@
-package c.x.codingtest
+package c.x.codingtest.easy
 
 object CamelCaseWordCount {
 

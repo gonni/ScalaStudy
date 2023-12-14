@@ -1,8 +1,7 @@
-package c.x.codingtest
+package c.x.codingtest.easy
 
 import scala.annotation.tailrec
 import scala.collection.immutable
-import scala.util.control.Breaks.break
 
 object StrongPassword {
 

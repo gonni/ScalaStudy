@@ -1,6 +1,6 @@
-package c.x.codingtest
+package c.x.codingtest.easy
+
 import scala.collection.Searching.{Found, InsertionPoint}
-import scala.collection.mutable._
 
 object ClimbingTheLeaderboard extends App {
 

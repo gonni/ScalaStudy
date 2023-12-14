@@ -1,4 +1,4 @@
-package c.x.codingtest
+package c.x.codingtest.easy
 
 object BirthdayCandles extends App {
   def birthdayCakeCandles(candles: Array[Int]): Int = {
