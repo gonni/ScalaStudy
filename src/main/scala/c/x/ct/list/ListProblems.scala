@@ -1,5 +1,4 @@
 package c.x.ct.list
-
 import scala.annotation.tailrec
 
 object ListProblems extends App {
