@@ -15,31 +15,45 @@ object BiggerIsGreater extends App {
       .mkString
   }
 
-  def biggerIsGreater(w: String): String = {
-    def swap(arr: Array[Char], i: Int, j: Int): Unit = {
-      val temp = arr(i)
-      arr(i) = arr(j)
-      arr(j) = temp
-    }
+  def biggerIsGreater(w1: String): String = {
+//    val string = StdIn.readLine().toBuffer
+    val w = w1.toCharArray
+    var i = w.size - 1
 
-    val chars = w.toCharArray
-    val charSortedIncr = chars.sortWith(_<_)//.toIndexedSeq
-    var i = chars.length - 2
-    while(i >= 0 && chars(i) >= chars(i+1)) {
+    while (i > 0 && w(i - 1) >= w(i)) i -= 1
+    println(i)
+
+    if (i <= 0) {
+      "no answer"
+    } else {
+      var j = w.size - 1
+
+      while (w(j) <= w(i - 1)) j -= 1
+      println("j=" + j)
+      println(w.mkString)
+
+      val temp = w(i - 1)
+      w(i - 1) = w(j)
+      w(j) = temp
+      println(w.mkString)
+
+      println(i)
+      w.patch(i, w.slice(i, w.size).reverse, w.size).mkString("")
+    }
+  }
+
+  //abdc => acbd
+  def biggerIsGreater1(w: String): String = {
+    val arr = w.toCharArray
+    var i = arr.length - 2
+    while(arr(i) > arr(i+1)) {
       i -= 1
     }
 
-    if(i > 0) {
-      swap(chars, i, i+1)
-      chars.mkString
-    } else if (i == -1) {
-      "no answer"
-    } else if(i == 0) {
-      val h1 = charSortedIncr(charSortedIncr.indexOf(chars(0)) + 1)
-      val newOne = h1 +: charSortedIncr.filterNot(_ == h1)//.sortWith(_<_)
-      newOne.mkString
+    if(i < 0) {
+      "no anwer"
     } else {
-      "ERROR"
+      w.patch(i, arr.slice(i, arr.length-1).sortWith(_<_), w.size).mkString
     }
   }
 
@@ -54,19 +68,20 @@ object BiggerIsGreater extends App {
 //  println(biggerIsGreater("bbb"))  // -> answer
 
 
-  val input =
-    """
-      |lmno
-      |dcba
-      |dcbb
-      |abdc
-      |abcd
-      |fedcbabcd
-      |abdc
-      |""".stripMargin.trim.lines()//.forEach(println)
+//  val input =
+//    """
+//      |lmno
+//      |dcba
+//      |dcbb
+//      |abdc
+//      |abcd
+//      |fedcbabcd
+//      |abdc
+//      |""".stripMargin.trim.lines()//.forEach(println)
+//
+//  input.forEach(v => println(s"$v => ${biggerIsGreater(v)}"))
 
-  input.forEach(v => println(s"$v => ${biggerIsGreater(v)}"))
-
+  println("abdc => " + biggerIsGreater("abdc"))
   println("abdc -> acbd")
 }
 
