@@ -29,20 +29,22 @@ object ListSampleMain extends App {
 //  }))
 
   // search & insert
-  val rank = Int.MaxValue +: Array(100,80,10,7,1,-1) :+ Int.MinValue
-  val newScoreStream = Array(30,2,1,-2,4,5)
-//  val res = Array[Int]()
-//  ss.distinctBy(identity).foreach(println)
-//  println(ss.search(1)(Ordering.Int.reverse))
+//  val rank = Int.MaxValue +: Array(100,80,10,7,1,-1) :+ Int.MinValue
+//  val newScoreStream = Array(30,2,1,-2,4,5)
+////  val res = Array[Int]()
+////  ss.distinctBy(identity).foreach(println)
+////  println(ss.search(1)(Ordering.Int.reverse))
+//
+//  val rankingBoard = rank.distinctBy(identity)
+//  val result = newScoreStream.foldLeft(Array.empty[Int]) { case(newRank, v) =>
+//    rankingBoard.search(v)(Ordering.Int.reverse) match {
+//      case Found(v) => newRank :+ v
+//      case InsertionPoint(v) => newRank :+ v
+//    }
+//  }
+//
+//  result.foreach(println)
 
-  val rankingBoard = rank.distinctBy(identity)
-  val result = newScoreStream.foldLeft(Array.empty[Int]) { case(newRank, v) =>
-    rankingBoard.search(v)(Ordering.Int.reverse) match {
-      case Found(v) => newRank :+ v
-      case InsertionPoint(v) => newRank :+ v
-    }
-  }
-
-  result.foreach(println)
-
+  val a = List(1,2,3,4,5,6,7)
+  println(a.drop(3).mkString(","))
 }
