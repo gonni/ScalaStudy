@@ -1,7 +1,5 @@
-package c.x.codingtest.mid
+package c.x.codingtest.mid.bfs
 
-import c.x.codingtest.mid.DesertIsland.worldMap
-import scala.reflect.ClassTag.Nothing
 import scala.util.control.Breaks.{break, breakable}
 
 object DesertIsland2 extends App {

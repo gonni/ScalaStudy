@@ -1,6 +1,5 @@
-package c.x.codingtest.mid
+package c.x.codingtest.mid.bfs
 
-import scala.collection.mutable
 import scala.util.control.Breaks.{break, breakable}
 
 object DesertIsland5 extends App {
@@ -73,3 +72,10 @@ object DesertIsland5 extends App {
   println("-----")
   solution(Vector[String]("XXX", "XXX", "XXX")).foreach(println)
 }
+//  def getList(minerals: List[String]) = {
+//    val a = minerals match {
+//      case m1 :: m2 :: m3 :: m4 :: m5 :: tail => 1
+//      case m1 +: tail =>
+//      case _ :: tail => 0
+//    }
+//  }

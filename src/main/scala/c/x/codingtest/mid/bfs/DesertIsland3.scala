@@ -1,6 +1,5 @@
-package c.x.codingtest.mid
+package c.x.codingtest.mid.bfs
 
-import scala.collection.mutable
 import scala.util.control.Breaks.{break, breakable}
 
 object DesertIsland3 extends App {
