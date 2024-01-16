@@ -11,7 +11,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="sbt: scala-sdk-2.13.12" level="project" />
+    <orderEntry type="library" name="sbt: scala-sdk-2.13.7" level="project" />
     <orderEntry type="library" name="sbt: com.github.ben-manes.caffeine:caffeine:3.1.8:jar" level="project" />
     <orderEntry type="library" name="sbt: com.github.takayahilton:sql-formatter_2.13:1.2.1:jar" level="project" />
     <orderEntry type="library" name="sbt: com.google.errorprone:error_prone_annotations:2.21.1:jar" level="project" />
@@ -77,14 +77,12 @@
     <orderEntry type="library" name="sbt: mysql:mysql-connector-java:8.0.28:jar" level="project" />
     <orderEntry type="library" name="sbt: org.checkerframework:checker-qual:3.37.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scala-lang.modules:scala-collection-compat_2.13:2.11.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.13.12:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scala-lang:scala-reflect:2.13.12:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.13.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala-reflect:2.13.7:jar" level="project" />
     <orderEntry type="library" name="sbt: org.slf4j:slf4j-api:1.7.36:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.typelevel:cats-core_2.13:2.9.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.typelevel:cats-effect-kernel_2.13:3.5.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.typelevel:cats-effect-std_2.13:3.5.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.typelevel:cats-effect_2.13:3.5.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.typelevel:cats-kernel_2.13:2.9.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.typelevel:cats-core_2.13:2.7.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.typelevel:cats-kernel_2.13:2.7.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.typelevel:simulacrum-scalafix-annotations_2.13:0.5.4:jar" level="project" />
     <orderEntry type="module-library">
       <library name="sbt: unmanaged-sources-and-docs">
         <CLASSES />
