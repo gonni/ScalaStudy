@@ -21,7 +21,29 @@ object ParethesesProblems extends App {
 //  println("=>" + hasValidParenthese(")("))
 
   def generateAllValidParenthses(n: Int): List[String] = {
+    @tailrec
+    def genParensTailrec(nRemainTurn: Int, currentStrings: Set[String]): Set[String] = {
+      println(s"Turn $nRemainTurn/$n with $currentStrings")
 
+      if(nRemainTurn == 0) currentStrings
+      else {
+        val newString = for {
+          string <- currentStrings
+          index <- 0 until string.length
+        } yield {
+          val (b, a) = string.splitAt(index)
+          println(s"--> $b|$a")
+
+          s"$b()$a"
+        }
+        genParensTailrec(nRemainTurn - 1, newString)
+      }
+    }
+    assert(n >= 0)
+
+    if(n == 0) List()
+    genParensTailrec(n - 1, Set("()")).toList
   }
 
+  List(1,2,3).foreach(n => println(n + "=>" + generateAllValidParenthses(n)))
 }
