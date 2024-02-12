@@ -1,6 +1,7 @@
 package com.rtj.trees
 
 import scala.annotation.tailrec
+import scala.collection.immutable.Queue
 
 sealed abstract class BTree[+T] {
   def value: T
@@ -113,7 +114,20 @@ case class BNode[+T](override val value: T, override val left: BTree[T], overrid
       if(root.isEmpty) List()
       else root.value :: preOrderedStack(root.left) ++ preOrderedStack(root.right)
     }
-    preOrderedStack(this)
+
+    @tailrec
+    def preOrderTailRec(stack: List[BTree[T]], visited: Set[BTree[T]] = Set(), acc: Queue[T] = Queue()): List[T] =
+      if(stack.isEmpty) acc.toList
+      else {
+        val node = stack.head
+        if(node.isEmpty) preOrderTailRec(stack.tail, visited, acc)
+        else if(node.isLeaf || visited.contains(node)) preOrderTailRec(stack.tail, visited, acc :+ node.value)
+        else preOrderTailRec(node :: node.left :: node.right :: stack.tail, visited + node, acc)
+      }
+
+
+//    preOrderedStack(this)
+    preOrderTailRec(List(this))
   }
 }
 
