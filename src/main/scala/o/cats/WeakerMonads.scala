@@ -29,7 +29,7 @@ class WeakerMonads {
   } yield (n, c)
 
 
-  def getPairs[M[_] : FlatMap, A, B](ma: M[A], mb: M[B]): M[(A, B)] = for {
+  def vgetPairs[M[_] : FlatMap, A, B](ma: M[A], mb: M[B]): M[(A, B)] = for {
     n <- ma
     c <- mb
   } yield (n, c)
