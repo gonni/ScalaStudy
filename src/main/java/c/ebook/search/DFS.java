@@ -1,4 +1,4 @@
-package c.ebook;
+package c.ebook.search;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package c.ebook;
+package c.ebook.search;
 
 public class TwoPointSum {
     public static void main(String[] args) {
