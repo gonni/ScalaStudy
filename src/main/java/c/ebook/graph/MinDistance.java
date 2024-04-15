@@ -2,7 +2,7 @@ package c.ebook.graph;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
-
+// Daick
 public class MinDistance {
     public static int V = 5, E = 6 ,K = 1; // V = node, E = edge, K = start node
     public static int distance[] ;
